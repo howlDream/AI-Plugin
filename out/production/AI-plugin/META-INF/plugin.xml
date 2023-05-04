@@ -1,0 +1,39 @@
+<idea-plugin>
+  <id>org.lizheng.AI-plugin</id>
+  <name>AI使用插件</name>
+  <version>1.0</version>
+  <vendor email="913683946@qq.com" url="913683946@qq.com">lizheng</vendor>
+
+  <description><![CDATA[
+       提供以下功能：<br>
+        利用AI做文本翻译<br>
+        后续可能做接入其他功能！！！<br>
+      <em>zheng.li</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      first version no changes notes.<br>
+      <em>zheng.li</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <!--    TransLaterAction-->
+    <action id="TransLaterAction" class="org.lizheng.action.TranslatorAction" text="翻译文本" icon="/images/translate.png">
+      <add-to-group group-id="EditorPopupMenu"/>
+    </action>
+  </actions>
+
+</idea-plugin>
