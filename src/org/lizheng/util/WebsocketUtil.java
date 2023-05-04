@@ -3,11 +3,10 @@ package org.lizheng.util;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 import org.java_websocket.client.WebSocketClient;
-import org.java_websocket.drafts.Draft_10;
+import org.java_websocket.drafts.Draft_6455;
 import org.java_websocket.handshake.ServerHandshake;
 
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
@@ -21,7 +20,7 @@ public class WebsocketUtil extends WebSocketClient {
     }
 
     public WebsocketUtil(URI uri,Map<String,String> headers , int connecttimeout) {
-        super(uri,new Draft_10(),headers,connecttimeout);
+        super(uri,new Draft_6455(),headers,connecttimeout);
     }
 
     @Override
